@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第十二天作业</title>
+    <style>
+        html {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .clearFix {
+            zoom: 1;
+        }
+
+        .clearFix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .active:before {
+            content: "";
+            width: 0.125rem;
+            height: 0.25rem;
+            background-color: #2399f1;
+            border-radius: 0 0.25rem 0.25rem 0;
+            box-shadow: 0 0 0.5rem #2399f1;
+            position: absolute;
+            left: -21.5%;
+        }
+
+        .wrapper {
+            float: left;
+            width: 6%;
+            height: 100%;
+            background-color: #1d2531;
+            text-align: center;
+        }
+
+        .wrapperTopIcon {
+            margin: 0.5rem 0;
+        }
+
+        .wrapperTopIcon:first-of-type {
+            margin-top: 1rem;
+        }
+
+        .wrapperBottom {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: inherit;
+            margin-bottom: 1rem;
+        }
+
+        .wrapperBottomIcon:first-of-type {
+            margin-right: 15%;
+        }
+
+        .secondary {
+            float: left;
+            width: 16%;
+            height: 100%;
+            background-color: #222c3c;
+            position: relative;
+        }
+
+        .secondaryBottom {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .secondaryBottomText {
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        .secondaryBottomText:first-of-type {
+            margin-right: 10%;
+        }
+
+        .full {
+            width: 70%;
+            height: 0.3rem;
+            margin: 0.5rem auto 1rem;
+            background-color: #475364;
+            border-radius: 2px;
+        }
+
+        .base {
+            width: 30%;
+            height: 100%;
+            background: linear-gradient(to right, #7f5be6, #9d8fe3);
+            border-radius: 2px;
+        }
+
+        .secondaryMain {
+            width: 70%;
+            margin: 10% auto;
+            border-bottom: 1px solid #2a3547;
+        }
+
+        .secondaryMain:nth-last-of-type(2) {
+            border-bottom: none;
+        }
+
+        .secondaryMainTitle {
+            font-size: 12px;
+            color: #5b6779;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-flow: row nowrap;
+        }
+
+        .secondaryMainText {
+            font-size: 14px;
+            line-height: 1.2rem;
+            color: #b7c0cd;
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-flow: row nowrap;
+            position: relative;
+        }
+
+        .secondaryMain:nth-of-type(2) .secondaryMainText {
+            justify-content: flex-start;
+        }
+
+        .secondaryMain:nth-of-type(2) .secondaryMainText div {
+            width: 20%;
+            display: flex;
+            align-items: center;
+        }
+
+        .notification {
+            padding: 0 0.5rem;
+            height: 1.2rem;
+            background-image: linear-gradient(0deg, #1991eb 0%, #2ea1f8 100%);
+            border-radius: 0.6rem;
+            text-align: center;
+        }
+
+        .notificationAlert {
+            padding: 0 0.5rem;
+            height: 1.2rem;
+            background-image: linear-gradient(180deg, #f45438 0%, #cb270a 100%);
+            border-radius: 0.6rem;
+            text-align: center;
+        }
+
+        .topBar {
+            width: 78%;
+            height: 5rem;
+            float: left;
+        }
+
+        .barName{
+            width: 30%;
+            height: 5rem;
+            float: left;
+            font-size: 1.5rem;
+            line-height: 5rem;
+            color: #354052;
+            margin-left: 2%;
+        }
+
+        .profile {
+            position: relative;
+            float: right;
+            width: 20%;
+            height: 5rem;
+            display:table-cell;
+            vertical-align:middle;
+        }
+
+        .profile:after {
+            content: " ";
+            display: inline-block;
+            height: 0.5rem;
+            width: 0.5rem;
+            border-width: 2px 2px 0 0;
+            border-color: #c8c8cd;
+            border-style: solid;
+            transform: rotate(135deg);
+            position: absolute;
+            top: 40%;
+            right: 20%;
+        }
+
+        .profileLeft {
+            position: relative;
+            float: left;
+            line-height: 5rem;
+            text-align: center;
+            font-size: 0;
+        }
+
+        .userFace {
+            vertical-align: middle
+        }
+
+        .userStatus {
+            position: absolute;
+            bottom: 21.5%;
+            right: 4.5%;
+        }
+
+        .profileRight {
+            float: right;
+            margin-right: 40%;
+            height: 100%;
+        }
+
+        .userName {
+            font-size: 1rem;
+            color: #2399f1;
+            height: 2.5rem;
+            line-height: 3.5rem;
+        }
+
+        .userRole {
+            font-size: 0.75rem;
+            color: #b5b5b5;
+        }
+    </style>
+</head>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<body>
+<div class="wrapper clearFix">
+    <div class="wrapperTop">
+        <img src="img/Item1.png" class="wrapperTopIcon active">
+        <img src="img/Item2.png" class="wrapperTopIcon">
+        <img src="img/Item3.png" class="wrapperTopIcon">
+        <img src="img/AddApp.png" class="wrapperTopIcon">
+    </div>
+    <div class="wrapperBottom">
+        <img src="img/Grid.png" class="wrapperBottomIcon">
+        <img src="img/Settings.png" class="wrapperBottomIcon">
+    </div>
+</div>
+<div class="secondary clearFix">
+    <div class="secondaryMain">
+        <div class="secondaryMainTitle"><span>MENU</span><img src="img/Settings.png"></div>
+        <div class="secondaryMainText"><span>Overview</span></div>
+        <div class="secondaryMainText"><span>Sales</span>
+            <div class="notification">54</div>
+        </div>
+        <div class="secondaryMainText"><span>Your Staff</span></div>
+        <div class="secondaryMainText"><span>Analytics & Targeting</span></div>
+        <div class="secondaryMainText"><span>What's New</span></div>
+    </div>
+    <div class="secondaryMain">
+        <div class="secondaryMainTitle"><span>YOUR PRODUCTS</span><img src="img/Settings.png"></div>
+        <div class="secondaryMainText">
+            <div><img src="img/BookofWisdom.png"></div>
+            <span>Books</span></div>
+        <div class="secondaryMainText">
+            <div><img src="img/VideoCamera.png"></div>
+            <span>Tutorials</span></div>
+        <div class="secondaryMainText">
+            <div><img src="img/Chart.png"></div>
+            <span>Stocks</span></div>
+        <div class="secondaryMainText">
+            <div><img src="img/Painting.png"></div>
+            <span>Infographics</span></div>
+    </div>
+    <div class="secondaryMain">
+        <div class="secondaryMainTitle"><span>DASHBOARD</span><img src="img/Settings.png"></div>
+        <div class="secondaryMainText active"><span>Messages</span>
+            <div class="notification">21</div>
+        </div>
+        <div class="secondaryMainText"><span>Connections</span></div>
+        <div class="secondaryMainText"><span>Integrations</span>
+            <div class="notificationAlert">!</div>
+        </div>
+        <div class="secondaryMainText"><span>Account Settings</span></div>
+        <div class="secondaryMainText"><span>App Settings</span></div>
+    </div>
+    <div class="secondaryBottom">
+        <span class="secondaryBottomText">Monthly Goals</span>
+        <span class="secondaryBottomText">$580/$3200</span>
+        <div class="full">
+            <div class="base"></div>
+        </div>
+    </div>
+</div>
+<div class="topBar clearFix">
+    <div class="barName">Messages</div>
+    <div class="profile">
+        <div class="profileLeft">
+            <img class="userFace" src="img/face.png">
+            <img class="userStatus" src="img/status.png">
+        </div>
+        <div class="profileRight">
+            <div class="userName">Jordan J.</div>
+            <div class="userRole">Administrator</div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    /*let test = $(".secondaryMain:nth-of-type(2) .secondaryMainText");
+    console.log(test.html());*/
+</script>
+</html>

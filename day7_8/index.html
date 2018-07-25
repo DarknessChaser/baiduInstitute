@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>布局测验</title>
+</head>
+<style>
+    body{
+        margin: 0px;
+        padding: 0px;
+    }
+    .header{
+        height: 60px;
+        background-color: #333333;
+    }
+    .top{
+        margin: 0 auto;
+        width: 960px;
+    }
+    .top_left{
+        float: left;
+        font-size: 25px;
+        line-height: 60px;
+        color: snow;
+    }
+    .top_right{
+        float: right;
+    }
+    .top_right a{
+        color: white;
+    }
+    .banner{
+        height: 300px;
+        background-color: #66bb33;
+    }
+    .banner_middle{
+        margin: 0 auto;
+        width: 960px;
+        height: 300px;
+    }
+    .page{
+        position: relative;
+        left: 80%;
+        top: 260px;
+        width: 20%;
+    }
+    .page_number{
+        float: left;
+        border: 1px black solid;
+        width: 10%;
+        height: 20px;
+        text-align: center;
+        margin: 10px 2px 0px 2px;
+        background-color: #b2dd99;
+    }
+    .page_number:hover{
+        margin-top: 0px;
+        padding-top: 10px;
+        background-color: white;
+    }
+    .wrapper_top{
+        width: 100%;
+    }
+    .wrapper_top_side{
+        width: calc(50% - 480px);
+        float: left;
+        height: 40px;
+        border-bottom: 1px darkgray solid;
+    }
+    .wrapper_top_middle{
+        width: 960px;
+        float: left;
+        height: 30px;
+        padding-top: 10px;
+        font-size: 0px;
+    }
+    .tab{
+        border: darkgray 1px solid;
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+        height: 29px;
+        line-height: 29px;
+        text-align: center;
+        width: 80px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        display: inline-block;
+        background-color: #eeeeee;
+    }
+    .tab.active{
+        border-bottom: none;
+    }
+    .tab:hover{
+        background-color: white;
+        border-bottom: none;
+    }
+    .wrapper_top_holder{
+        float: right;
+        height: 30px;
+        width: calc(100% - 82*3px);
+        border-bottom: 1px darkgray solid;
+    }
+    .wrapper_main{
+        width: 960px;
+        margin: 0 auto;
+        height: 600px;
+    }
+    .wrapper_content {
+        height: 180px;
+        line-height: 180px;
+        display: inline-block;
+        float: left;
+        text-align: center;
+        border: darkgray 1px solid;
+    }
+    .line1 .wrapper_content {
+        width: calc((98% - 5px)/3);
+        margin: 5px 0px 0px 5px;
+    }
+    .line1 .wrapper_content:first-child {
+        margin: 5px 0px 0px 0px;
+    }
+    .line2 .wrapper_content{
+        width: calc((98% - 5px)/4);
+        margin: 5px 0px 0px 5px;
+    }
+    .line2 .wrapper_content:first-child {
+        margin: 5px 0px 0px 0px;
+    }
+    .footer{
+        margin-top: 10px;
+        background-color: #666666;
+        height: 180px;
+        padding-top: 20px;
+        color: white;
+        text-align: center;
+        font-size: 18px;
+    }
+</style>
+<body>
+<div class="header">
+    <div class="top">
+        <div class="top_left">Logo</div>
+        <div class="top_right">
+            <a href="javascript:void(0);">github</a>
+            <a href="javascript:void(0);">注册</a>
+            <a href="javascript:void(0);">登陆</a>
+        </div>
+    </div>
+</div>
+<div class="banner">
+    <div class="banner_middle">
+        <div class="page">
+            <div class="page_number">1</div>
+            <div class="page_number">2</div>
+            <div class="page_number">3</div>
+            <div class="page_number">4</div>
+        </div>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="wrapper_top">
+        <div class="wrapper_top_side"></div>
+        <div class="wrapper_top_middle">
+            <a class="tab active" href="javascript:void(0);">home</a>
+            <a class="tab" href="javascript:void(0);">profile</a>
+            <a class="tab" href="javascript:void(0);">about</a>
+            <div class="wrapper_top_holder"></div>
+        </div>
+        <div class="wrapper_top_side"></div>
+    </div>
+    <div class="wrapper_main">
+        <div class="line1">
+            <div class="wrapper_content">content1</div>
+            <div class="wrapper_content">content2</div>
+            <div class="wrapper_content">content3</div>
+        </div>
+        <div class="line2">
+            <div class="wrapper_content">content4</div>
+            <div class="wrapper_content">content5</div>
+            <div class="wrapper_content">content6</div>
+            <div class="wrapper_content">content7</div>
+        </div>
+        <div class="line1">
+            <div class="wrapper_content">content8</div>
+            <div class="wrapper_content">content9</div>
+            <div class="wrapper_content">content10</div>
+        </div>
+    </div>
+</div>
+<div class="footer">©2018&nbsp;darknesschaser.niqun.club</div>
+</body>
+</html>

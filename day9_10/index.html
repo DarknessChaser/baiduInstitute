@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第九天作业</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .clearFix {
+            zoom: 1;
+        }
+
+        .clearFix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .head {
+            background-size: cover;
+            padding-bottom: 210px;
+            background-image: url("img/headbackground.png");
+        }
+
+        .headTop {
+            text-align: center;
+            width: 100%;
+        }
+
+        .heading {
+            height: 200px;
+            font-size: 62px;
+            line-height: 200px;
+            color: #ffffff;
+        }
+
+        .introduction {
+            margin: 0 auto 100px auto;
+            width: 40%;
+            font-size: 20px;
+            line-height: 32px;
+            letter-spacing: 0;
+            color: #ffffff;
+        }
+
+        .headMain {
+            text-align: center;
+            margin: 0 auto;
+            padding-bottom: 50px;
+            width: 80%;
+            height: 250px;
+            border-radius: 2px;
+            border: solid 1px rgba(255, 255, 255, 0.2);
+        }
+
+        .pointWeight {
+            font-size: 16px;
+            margin-top: 60px;
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
+
+        .pointLight {
+            margin-top: 20px;
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .headInput {
+            margin: 45px 15px;
+            padding: 18px;
+            width: 20%;
+            border-radius: 2px;
+            border: solid 1px #ffffff;
+        }
+
+        .headMain input:not([type="button"]) {
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .first {
+            text-align: center;
+        }
+
+        .first h5 {
+            font-weight: normal;
+            font-stretch: normal;
+            margin-top: 90px;
+        }
+
+        .first h1 {
+            font-size: 42px;
+            font-weight: normal;
+            font-stretch: normal;
+            margin: 40px auto 80px auto;
+        }
+
+        .showItems {
+            width: 80%;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .showItem {
+            width: 50%;
+            float: left;
+            text-align: left;
+        }
+
+        .itemIcon {
+            width: 10%;
+            float: left;
+        }
+
+        .itemTitle {
+            font-size: 20px;
+            line-height: 32px;
+            float: right;
+            width: 90%;
+            margin-bottom: 25px;
+        }
+
+        .itemText {
+            font-size: 16px;
+            line-height: 26px;
+            float: right;
+            width: 90%;
+            margin-bottom: 80px;
+        }
+
+        .second {
+            background-size: cover;
+            background-image: url("img/secondbackground.png");
+        }
+
+        .secondLeft {
+            float: left;
+            vertical-align: center;
+            color: #ffffff;
+            width: 40%;
+            margin-left: 10%;
+            margin-top: 10%;
+        }
+
+        .secondTitle {
+            font-size: 42px;
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 52px;
+        }
+
+        .secondIntroduction {
+            font-size: 18px;
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 28px;
+        }
+
+        .btnWhite {
+            margin: 5% 5% 5% 0px;
+            width: 40%;
+            height: 60px;
+            background-color: #ffffff;
+            border-radius: 2px;
+            border: none;
+            font-size: 12px;
+        }
+
+        .btnTransparent {
+            width: 40%;
+            height: 60px;
+            background-color: rgba(0, 0, 0, 0);
+            border-radius: 2px;
+            border: solid 1px #ffffff;
+            font-size: 12px;
+            color: #ffffff;
+        }
+
+        .secondRight {
+            float: left;
+            width: 50%;
+        }
+
+        .secondRightImg {
+            width: 80%;
+            margin: 10% 0px 10% 0px;
+            float: right;
+        }
+
+        .third {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .thirdHead {
+            margin: 10% 0;
+            text-align: center;
+            font-size: 42px;
+            font-weight: normal;
+            font-stretch: normal;
+        }
+
+        .thirdMain {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: center;;
+        }
+
+        .thirdIntroduction {
+            width: 30%;
+        }
+
+        .thirdText {
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            margin: 10% 5% 20% 5%;
+        }
+
+        .fifth {
+            border: darkgray solid 1px;
+            border-style: solid none;
+            padding: 10% 15%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fifthImg {
+            width: 60%;
+            margin: 5% 0px;
+        }
+
+        .fifthImg:first-of-type {
+            text-align: left;
+        }
+
+        .fifthImg:last-of-type {
+            text-align: right;
+        }
+
+        .fifthText {
+            width: 30%;
+        }
+
+        .fifthText:first-of-type {
+            float: right;
+        }
+
+        .fifthText:last-of-type {
+            float: left;
+        }
+
+        .sixth {
+            padding: 5% 15%;
+            border-bottom: lightgray solid 1px;
+        }
+
+        .sixthTitle {
+            text-align: center;
+            padding: 0% 15% 5%;
+        }
+
+        .sixthMain{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sixthImg {
+            position: relative;
+            margin: 1%;
+        }
+
+        .sixthImg:hover>.sixthCover {
+            visibility: visible;
+        }
+
+        .sixthCover {
+            visibility: hidden;
+            position: absolute;
+            background-color: #141414;
+            border-radius: 2px;
+            opacity: 0.65;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+        .sixthCover>h4 {
+            margin-top: 20%;
+            font-size: 20px;
+            font-weight: normal;
+            font-stretch: normal;
+            color: #ffffff;
+        }
+
+        .sixthCover>p {
+            font-size: 12px;
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 28px;
+            color: #ffffff;
+        }
+
+        .sixthCover>img {
+            margin: 6% 1%;
+        }
+
+        .seventh {
+            padding: 5% 15%;
+        }
+
+        .seventhLeft {
+            float: left;
+            width: 40%;
+            border-radius: 10px;
+            border: solid 1px lightgray;
+            text-align: center;
+        }
+
+        .seventhInput {
+            width: 70%;
+            border-radius: 2px;
+            border: solid 1px #262321;
+            margin: 2% 0%;
+            padding: 1%;
+            font-size: 14px;
+            line-height: 26px;
+        }
+
+        .btnBlack {
+            width: 73%;
+            margin: 2% 0% 4em;
+            padding: 3%;
+            background-color: #141414;
+            border-radius: 2px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: #ffffff;
+            border: none;
+        }
+
+        .seventhRight {
+            float: right;
+            width: 40%;
+        }
+
+        .seventhInfo {
+            margin: 5% 0px;
+        }
+
+        .seventhInfo:first-of-type {
+            margin-top: 10%;
+        }
+
+        .seventhIcon {
+            width: 10%;
+            float: left;
+        }
+
+        .seventhText {
+            width: 90%;
+            float: right;
+        }
+
+        .foot {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: flex-start;
+            color: #ffffff;
+            background-color: #141414;
+        }
+
+        .footerText {
+            width: 20%;
+            margin: 5% 0px;
+        }
+        .footerText p {
+            opacity: 0.3;
+        }
+        .footerIcon {
+            margin-right: 5%;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+<div class="head clearFix">
+    <div class="headTop">
+        <div class="heading">Hello World</div>
+        <div class="introduction">China is speeding up strategic plan, standards, traffic rules, laws and regulations on
+            accident-incurred liabilities for its smart car industry, Economic Information Daily reported Thursday.
+        </div>
+    </div>
+    <div class="headMain">
+        <div class="pointWeight">Create Your Account</div>
+        <div class="pointLight">It is absolutely free</div>
+        <input class="headInput" type="email" placeholder="denis@getcraftwork.com">
+        <input class="headInput" type="password" placeholder="Create your password">
+        <input class="headInput" type="button" value="SIGN UP">
+    </div>
+</div>
+<div class="first clearFix">
+    <h5 class="">BOATLOADS OF AWESOME</h5>
+    <h1>Ready-made, customizable,<br> HTML landing page sections</h1>
+    <div class="showItems">
+        <div class="showItem">
+            <div class="itemIcon"><img src="img/itemIcon1.png"></div>
+            <div class="itemTitle">Mobile First</div>
+            <div class="itemText">All modulz are built mobile-first for maximum device compatibility.</div>
+        </div>
+        <div class="showItem">
+            <div class="itemIcon"><img src="img/itemIcon2.png"></div>
+            <div class="itemTitle">Accessibility</div>
+            <div class="itemText">Support for IE8, mobile and tablet devices, screenreaders and color blind.</div>
+        </div>
+        <div class="showItem">
+            <div class="itemIcon"><img src="img/itemIcon3.png"></div>
+            <div class="itemTitle">Fluid Typography</div>
+            <div class="itemText">On different screen sizes, fonts automagically scale with the viewport.</div>
+        </div>
+        <div class="showItem">
+            <div class="itemIcon"><img src="img/itemIcon4.png"></div>
+            <div class="itemTitle">Customization</div>
+            <div class="itemText">Make any design your own using the Style Editor. Personalize fonts, colors, and
+                layouts to create the custom look you want.
+            </div>
+        </div>
+    </div>
+</div>
+<div class="second clearFix">
+    <div class="secondLeft">
+        <p class="secondTitle">Supportive policies for China's smart car</p>
+        <p class="secondIntroduction">China will come up with its own smart car standards, traffic rules, laws and
+            regulations relating to safety, according to the China Industry Innovation Alliance for the Intelligent and
+            Connected Vehicles.</p>
+        <button class="btnWhite">CHECK OUT FEATURES</button>
+        <button class="btnTransparent">TRY PRODUCT FOR FREE</button>
+    </div>
+    <div class="secondRight">
+        <img class="secondRightImg" src="img/iPad.png">
+    </div>
+</div>
+<div class="third">
+    <div class="thirdHead">Try Our Awesome Products</div>
+    <div class="thirdMain">
+        <div class="thirdIntroduction">
+            <span><img src="img/thirdtitle1.png"></span>
+            <p class="thirdText">Li Jun, a China Academy of Engineering academician and also director of the
+                alliance's experts'
+                committee, said that China will also launch design guidance for smart cars, smart map architecture and
+                standards for test grounds.</p>
+        </div>
+        <div class="thirdIntroduction">
+            <span><img src="img/thirdtitle2.png"></span>
+            <p class="thirdText">Li said the smart car industry is able to enlarge the current car industry by 1
+                trillion yuan ($158.15 billion) and also able to boost fast development in 5G, internet of cars, big
+                data,
+                artificial intelligence and new-energy vehicles.</p>
+        </div>
+        <div class="thirdIntroduction">
+            <p><img src="img/thirdtitle3.png"></p>
+            <p class="thirdText">Zhang Junyi, a partner with NIO Capital, said that the smart car is the trend for
+                the car industry and China's auto sector will usher in a new key development stage with the improvement
+                of
+                infrastructure, technology, policies and laws.</p>
+        </div>
+    </div>
+</div>
+<div class="fifth">
+    <div class="fifthImg"><img src="img/fifthtitle1.png"></div>
+    <div class="fifthText"><p><h4>Learn How to Improve Your Personal Business</h4></p><p>Li Jun, a China Academy of
+        Engineering academician and also director of the alliance's experts' committee, said that China will also launch
+        design guidance for smart cars, smart map architecture and standards for test grounds.</p></div>
+    <div class="fifthText"><p><h4>Choose Between Two Beautifully Designed Color Schemes.</h4></p><p>China will come up
+        with its own smart car standards, traffic rules, laws and regulations relating to safety, according to the China
+        Industry Innovation Alliance for the Intelligent and Connected Vehicles.</p></div>
+    <div class="fifthImg"><img src="img/fifthtitle2.png"></div>
+</div>
+<div class="sixth">
+    <div class="sixthTitle">
+        <h2>Our Awesome Crew</h2>
+        <p>Our unique online teaching style makes learning easy for everyone. Whether you are trying to land a new job,
+            brush up on your skills.</p>
+    </div>
+    <div class="sixthMain">
+        <div class="sixthImg"><img src="img/sixthimg1.png">
+            <div class="sixthCover">
+                <h4>Ethan Dutton</h4>
+                <p>SENIOR VISUAL DESIGNER</p>
+                <img src="img/Facebook.png">
+                <img src="img/Twitter.png">
+                <img src="img/Instagram.png">
+            </div>
+        </div>
+        <div class="sixthImg"><img src="img/sixthimg2.png"></div>
+        <div class="sixthImg"><img src="img/sixthimg3.png"></div>
+        <div class="sixthImg"><img src="img/sixthimg4.png"></div>
+    </div>
+</div>
+<div class="seventh clearFix">
+    <div class="seventhLeft">
+        <p><h4>FELL FREE TO WRITE US</h4></p>
+        <input class="seventhInput" type="email" placeholder="E-mail">
+        <input class="seventhInput" type="text" placeholder="Subject">
+        <textarea class="seventhInput" placeholder="Message"></textarea>
+        <button class="btnBlack">SEND</button>
+    </div>
+    <div class="seventhRight">
+        <p><h2>Contacts</h2></p>
+        <p>Make any design your own using the Style Editor. Personalize fonts, colors, and layouts to create the custom
+            look you want.</p>
+        <div class="seventhInfo clearFix">
+            <div class="seventhIcon"><img src="img/MapIcon.png"></div>
+            <div class="seventhText">360 King Street</div>
+            <div class="seventhText">Feastrvale Trevose, PA 19057</div>
+        </div>
+        <div class="seventhInfo clearFix">
+            <div class="seventhIcon"><img src="img/PhoneIcon.png"></div>
+            <div class="seventhText">(755) 564-84-12</div>
+        </div>
+        <div class="seventhInfo clearFix">
+            <div class="seventhIcon"><img src="img/MailIcon.png"></div>
+            <div class="seventhText">youname@mail.com</div>
+        </div>
+    </div>
+</div>
+<footer class="foot">
+    <div class="footerText">
+        <h3>LEARN MORE</h3>
+        <span>
+            <p>How it works?</p>
+            <p>Meeting tools</p>
+            <p>Live streaming</p>
+            <p>Contact method</p>
+        </span>
+    </div>
+    <div class="footerText">
+        <h3>ABOUT US</h3>
+        <span>
+            <p>About us</p>
+            <p>Features</p>
+            <p>Privacy police</p>
+            <p>Terms & Conditions</p>
+        </span>
+    </div>
+    <div class="footerText">
+        <h3>SUPPORT</h3>
+        <span>
+            <p>F.A.Q.</p>
+            <p>Contact us</p>
+            <p>Live chat</p>
+            <p>Phone call</p>
+        </span>
+    </div>
+    <div class="footerText">
+        <h3>ENJOY YOUR LIFE</h3>
+        <span>
+            <p>Great web UI kit for designers,</p>
+            <p>freelancers or business.</p>
+        </span>
+        <div>
+            <img class="footerIcon" src="img/TwitterIcon.png">
+            <img class="footerIcon" src="img/FacebookIcon.png">
+            <img class="footerIcon" src="img/GoogleIcon.png">
+            <img class="footerIcon" src="img/TumblerIcon.png">
+            <img class="footerIcon" src="img/PinterestIcon.png">
+            <img class="footerIcon" src="img/LinkedInIcon.png">
+        </div>
+    </div>
+</footer>
+</body>
+</html>

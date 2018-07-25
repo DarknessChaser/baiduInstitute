@@ -1,0 +1,51 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.class0{
+    float: left;
+    width: 100%;
+    background-color: #858585;
+    color: snow;
+    padding: 20px;
+    height: 80px;
+}
+.class1{
+    padding-right: 1%;
+}
+.class2{
+    padding-right: 4%;
+}
+.class3{
+    float: left;
+    width: 100%;
+}
+.class4{
+    float: left;
+    width: 100%;
+    margin-bottom: 1%;
+}
+.class5{
+    float: left;
+    width: 100%;
+    border-bottom: 1px white solid;
+}
+.class6{
+    float: left;
+}
+.class7{
+    height: 800px;
+}
+.class8{
+    float: left;
+    width: 80%;
+    height: 120px;
+}
+.class9{
+    background-color: #D9D9D9;
+    text-align: center;
+    float: left;
+    width: 20%;
+    height: 120px;
+    line-height: 80px;
+}

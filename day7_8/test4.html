@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>布局测试</title>
+</head>
+<style>
+    body{
+        margin: 0px;
+        padding: 0px;
+    }
+    .main{
+        background-color: black;
+        width: 100%;
+        overflow: hidden;
+    }
+    .left{
+        background-color: aqua;
+        width: 100px;
+        float: left;
+    }
+    .middle{
+        background-color: aquamarine;
+        width: calc(100% - 200px);
+        float: left;
+    }
+    .right{
+        background-color: blueviolet;
+        float: right;
+        width: 100px;
+    }
+</style>
+<body>
+<div class="main">
+    <div class="left">左边</div>
+    <div class="middle">中间</div>
+    <div class="right">右边</div>
+</div>
+</body>
+</html>
