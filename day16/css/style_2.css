@@ -1,0 +1,37 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.class0{
+    float: left;
+    width: 20%;
+    background-color: #007bff;
+    color: snow;
+    padding: 20px;
+    height: 80%;
+}
+.class1{
+    padding-right: 1%;
+}
+.class2{
+    padding-right: 4%;
+}
+.class3{
+    float: left;
+    width: 100%;
+}
+.class4{
+    float: left;
+    width: 100%;
+    margin-bottom: 1%;
+}
+.class5{
+    float: right;
+    width: 75%;
+}
+.class6{
+
+}
+.class7{
+    height: 800px;
+}
