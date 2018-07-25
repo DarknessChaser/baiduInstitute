@@ -2,56 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67fe5d72-ddf8-4bd7-a7ca-f570ffe29ffe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day11_12/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day11_12/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day11_12/.idea/day11_12.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day11_12/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day11_12/img/ActiveHighlight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day11_12/img/AddApp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day11_12/img/BookofWisdom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day11_12/img/Chart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day11_12/img/Grid.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day11_12/img/Item1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day11_12/img/Item2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day11_12/img/Item3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day11_12/img/Painting.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day11_12/img/Settings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day11_12/img/VideoCamera.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day11_12/img/face.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day11_12/img/status.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day11_12/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/Facebook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/FacebookIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/GoogleIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/Instagram.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/LinkedInIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/MailIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/MapIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/PhoneIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/PinterestIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/TumblerIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/Twitter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/TwitterIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/fifthtitle1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/fifthtitle2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/headbackground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/iPad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/itemIcon1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/itemIcon2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/itemIcon3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/itemIcon4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/secondbackground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/sixthimg1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/sixthimg2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/sixthimg3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/sixthimg4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/thirdtitle1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/thirdtitle2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/img/thirdtitle3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9_10/index.html" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/day17_18/task1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day17_18/task2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -72,38 +25,59 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="2" />
+          <entry key="html" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="2" />
+          <entry key="HTML" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="54" />
+          <entry key="html" value="587" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="54" />
+          <entry key="HTML" value="587" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/day16/index.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day17_18/task1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="61" column="67" selection-start-line="61" selection-start-column="67" selection-end-line="61" selection-end-column="67" />
+            <state relative-caret-position="722">
+              <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/day17_18/task2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>github</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -112,6 +86,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/day16/index.html" />
+        <option value="$PROJECT_DIR$/day17_18/task1.html" />
+        <option value="$PROJECT_DIR$/day17_18/task2.html" />
       </list>
     </option>
   </component>
@@ -126,6 +102,9 @@
     <option name="y" value="60" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -148,7 +127,17 @@
             <path>
               <item name="baiduInstitute" type="b2602c69:ProjectViewProjectNode" />
               <item name="baiduInstitute" type="462c0819:PsiDirectoryNode" />
+              <item name="day12_15" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baiduInstitute" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baiduInstitute" type="462c0819:PsiDirectoryNode" />
               <item name="day16" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baiduInstitute" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baiduInstitute" type="462c0819:PsiDirectoryNode" />
+              <item name="day17_18" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -157,6 +146,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -184,12 +174,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532530031927</updated>
-      <workItem from="1532530033099" duration="572000" />
+      <workItem from="1532530033099" duration="6590000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="572000" />
+    <option name="totallyTimeSpent" value="6590000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -230,8 +220,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day16/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
+        <state relative-caret-position="1159">
           <caret line="61" column="67" selection-start-line="61" selection-start-column="67" selection-end-line="61" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day12_15/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="242" selection-start-line="242" selection-end-line="242" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day17_18/task1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day17_18/task2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
         </state>
       </provider>
     </entry>
