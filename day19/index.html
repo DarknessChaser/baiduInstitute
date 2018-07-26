@@ -61,7 +61,7 @@
         let span = document.getElementById(sectionId).getElementsByTagName("span")
         let temp = []
         for (let i = 0; i < span.length; i++) {
-            if (span[i].innerHTML == spanCont) {
+            if (span[i].innerHTML === spanCont) {
                 temp.push(span[i].parentNode)
             }
         }
@@ -70,8 +70,14 @@
 
     function getActiveLinkContent(sectionId) {
         // 返回某个section下，class为active的链接中包含的文字内容
-        let active = document.getElementById(sectionId).getElementsByClassName('active')
-        return active
+        let active = document.getElementById(sectionId).getElementsByTagName("*")
+        let temp = []
+        for (let i = 0; i < active.length; i++) {
+            if (active[i].className === 'active') {
+                temp.push(active[i].innerHTML)
+            }
+        }
+        return temp
     }
 
     //console.log(getAllListItem())
