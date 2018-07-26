@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table td {
+        border: black solid 1px;
+        width: 5%;
+        text-align: center;
+    }
+</style>
+<body>
+<table>
+    <tbody id="tab"></tbody>
+</table>
+</body>
+<script>
+    let tabHtml = ''
+    for (let i = 1; i <= 9; i++) {
+        tabHtml += '<tr>'
+        for (let j = 1; j <= i; j++) {
+            tabHtml += '<td>'+j + '*' + i + '=' + i * j+'</td>'
+        }
+        tabHtml += '</tr>'
+    }
+    document.querySelector('#tab').innerHTML = tabHtml
+</script>
+</html>
