@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="name" type="text" onkeyup="key(event)">
+<button id="submit-btn" onclick="console.log(document.getElementById('name').value)">Submit</button>
+</body>
+<script>
+    function key(e) {
+        let keynum = window.event ? e.keyCode : e.which
+        let name = document.getElementById('name')
+        if (keynum == 27) {
+            name.value = ''
+        }
+        if (keynum == 13) {
+            console.log(name.value)
+        }
+    }
+</script>
+</html>
