@@ -4,7 +4,40 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<style>
+    #animate {
+        width: 480px;
+        height: 480px;
+        background-repeat: no-repeat;
+        background-image: url("img/erik.jpg");
+    }
+</style>
 <body>
-
+<div id="animate"></div>
 </body>
+<script>
+    let style = document.querySelector("#animate").style
+    style.backgroundPositionY = "-2px"
+    function down() {
+        let time1 = setInterval(function () {
+            if (style.backgroundPositionY == "-7682px") {
+                window.clearInterval(time1)
+                up()
+            } else {
+                style.backgroundPositionY = style.backgroundPositionY.replace('px', '') - 480 + "px"
+            }
+        }, 100)
+    }
+    function up() {
+        let time2 = setInterval(function () {
+            if (style.backgroundPositionY == "-2px") {
+                window.clearInterval(time2)
+                down()
+            } else {
+                style.backgroundPositionY = style.backgroundPositionY.replace('px', '')*1 + 480 + "px"
+            }
+        }, 100)
+    }
+    down()
+</script>
 </html>
