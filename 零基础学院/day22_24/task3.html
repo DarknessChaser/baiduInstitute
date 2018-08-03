@@ -43,10 +43,14 @@
     去掉字符串str中，连续重复的地方
     */
     function removeRepetition(str) {
-        let result = "";
-
-        // do something
-
+        if(str === '') return '';
+        let result = str[0];
+        let len = str.length;
+        for(let i=1;i<len;i++) {
+            if(str[i] !== str[i-1]) {
+                result += str[i];
+            }
+        }
         return result;
     }
 
