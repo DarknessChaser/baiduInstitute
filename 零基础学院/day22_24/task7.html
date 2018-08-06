@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第二十二天到第二十四天</title>
+</head>
+<body>
+<script>
+
+    function sortNumber(a, b) {
+        return a - b
+    }
+
+    function sortNumberArray(a, b) {
+        return b[1] - a[1]
+    }
+
+    function sortObj(a, b) {
+        return a.value - b.value
+    }
+
+    var arr = [43, 54, 4, -4, 84, 100, 58, 27, 140];
+    console.log(arr.sort(sortNumber))
+
+    arr = ['apple', 'dog', 'cat', 'car', 'zoo', 'orange', 'airplane'];
+    console.log(arr.sort())
+
+    arr = [[10, 14], [16, 60], [7, 44], [26, 35], [22, 63]];
+    console.log(arr.sort(sortNumberArray))
+
+    arr = [
+        {
+            id: 1,
+            name: 'candy',
+            value: 40
+        }, {
+            id: 2,
+            name: 'Simon',
+            value: 50
+        }, {
+            id: 3,
+            name: 'Tony',
+            value: 45
+        }, {
+            id: 4,
+            name: 'Annie',
+            value: 60
+        }
+    ];
+    console.log(arr.sort(sortObj))
+</script>
+</body>
+</html>
