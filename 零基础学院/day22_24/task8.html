@@ -41,48 +41,54 @@
     let menuArr = [
         [1, "Area1", -1],
         [2, "Area2", -1],
+        [5, "Area2-1", 2],
         [3, "Area1-1", 1],
         [4, "Area1-2", 1],
-        [5, "Area2-1", 2],
+        [8, "Area2-2-1", 6],
         [6, "Area2-2", 2],
         [7, "Area1-2-3", 4],
-        [8, "Area2-2-1", 6],
     ];
 
-    var menuObject = {
-        "1": {
-            name: "Area1",
-            subMenu: {
-                "3": {
-                    name: "Area1-1"
-                },
-                "4": {
-                    name: "Area1-2",
-                    subMenu: {
-                        "7": {
-                            name: "Area1-2-3"
-                        }
-                    }
-                }
-            }
-        }
+    function sortMenu(arr1, arr2) {
+        return arr1[2] - arr2[2]
     }
 
-    function arrayToObj(arr) {
-        let obj = {}
-        for (let i in arr) {
-            if(arr[i][2]==-1) {
-                obj[arr[i][0]] = {}
-                obj[arr[i][0]][name] = arr[i][1]
-                obj[arr[i][0]][subMenu] = {}
-            }
-            if(arr[i][2]!=-1) {
-                obj[arr[i][2]][]
+    function getMap(arr) {
+        arr = arr.sort(sortMenu)
+        let mp = new Map();
+        let len = arr.length, it;
+
+        for (let i = 0; i < len; i++) {
+            it = arr[i];
+            if (mp.has(it[2])) {
+                mp.set(it[2], [...mp.get(it[2]), {id: it[0], name: it[1]}]);
+            } else {
+                mp.set(it[2], [{id: it[0], name: it[1]}]);
             }
         }
+        return mp;
     }
 
-    console.log(arrayToObj(menuArr))
+    function ArrToObj(arr, mp) {
+        console.log(arr);
+
+        let obj = {}, it;
+        let len = arr.length;
+        for (let i = 0; i < len; i++) {
+            it = arr[i];
+            obj[it.id] = {
+                name: it.name,
+            }
+            if (mp.has(it.id)) {
+                obj[it.id].subMenu = ArrToObj(mp.get(it.id), mp);
+            }
+        }
+        return obj;
+    }
+
+    let mp = getMap(menuArr);
+
+    console.log(ArrToObj(mp.get(-1), mp));
 </script>
 </body>
 </html>
