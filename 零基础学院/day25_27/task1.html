@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第二十五天到第二十七天</title>
+</head>
+<body>
+<div id="date"></div>
+<script>
+    let show = document.querySelector("#date")
+    let time = setInterval(function () {
+        show.innerHTML = getMyDate(new Date(), 'en')
+    }, 1000)
+
+    function getMyDate(date, language) {
+        let mydate = new Date(date)
+        if (language == 'cn') {
+            return mydate.getFullYear() + '年' + getMyMonth(mydate) + '月' + getMyDay(mydate) + '日 ' + getWeekByDay(mydate, language) + ' ' + getMyHours(mydate) + ':' + getMyMinutes(mydate) + ':' + getMySeconds(mydate)
+        }
+        if (language == 'en') {
+            return mydate.getFullYear() + '-' + getMyMonth(mydate) + '-' + getMyDay(mydate) + ' ' + getWeekByDay(mydate, language) + ' ' + getMyHours2(mydate) + ':' + getMyMinutes(mydate) + ':' + getMySeconds(mydate) + ' ' + (mydate.getHours() < 12 ? 'AM' : 'PM')
+        }
+    }
+
+    function getMyMonth(date) {
+        let mydate = new Date(date)
+        return mydate.getMonth() < 9 ? '0' + (mydate.getMonth() * 1 + 1) : (mydate.getMonth() * 1 + 1)
+    }
+
+    function getMyDay(date) {
+        let mydate = new Date(date)
+        return mydate.getDate() < 10 ? '0' + mydate.getDate() : mydate.getDate()
+    }
+
+    function getWeekByDay(date, language) {
+        let mydate = new Date(date)
+        let week = []
+        if (language == 'cn')
+            week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+        if (language == 'en')
+            week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+        return week[mydate.getDay()]
+    }
+
+    function getMyHours(date) {
+        let mydate = new Date(date)
+        return mydate.getHours() < 10 ? '0' + mydate.getHours() : mydate.getHours()
+    }
+
+    function getMyHours2(date) {
+        let mydate = new Date(date)
+        return mydate.getHours() % 12 < 10 ? '0' + mydate.getHours() % 12 : mydate.getHours() % 12
+    }
+
+    function getMyMinutes(date) {
+        let mydate = new Date(date)
+        return mydate.getMinutes() < 10 ? '0' + mydate.getMinutes() : mydate.getMinutes()
+    }
+
+    function getMySeconds(date) {
+        let mydate = new Date(date)
+        return mydate.getSeconds() < 10 ? '0' + mydate.getSeconds() : mydate.getSeconds()
+    }
+</script>
+</body>
+</html>
