@@ -28,7 +28,27 @@
             clear: both;
         }
 
-        .active:before {
+        .active1 {
+            position: relative;
+        }
+
+        .active1:before {
+            content: "";
+            width: 0.125rem;
+            height: 0.25rem;
+            background-color: #2399f1;
+            border-radius: 0 0.25rem 0.25rem 0;
+            box-shadow: 0 0 0.5rem #2399f1;
+            position: absolute;
+            top: 50%;
+            left: 0%;
+        }
+
+        .active2 {
+            position: relative;
+        }
+
+        .active2:before {
             content: "";
             width: 0.125rem;
             height: 0.25rem;
@@ -48,11 +68,16 @@
         }
 
         .wrapperTopIcon {
-            margin: 0.5rem 0;
+            vertical-align: bottom;
+            margin: 1rem 0;
         }
 
         .wrapperTopIcon:first-of-type {
-            margin-top: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .wrapperTopIcon > img {
+            width: 60%;
         }
 
         .wrapperBottom {
@@ -135,7 +160,6 @@
             align-items: center;
             justify-content: space-between;
             flex-flow: row nowrap;
-            position: relative;
         }
 
         .secondaryMain:nth-of-type(2) .secondaryMainText {
@@ -170,7 +194,7 @@
             float: left;
         }
 
-        .barName{
+        .barName {
             width: 30%;
             height: 5rem;
             float: left;
@@ -185,8 +209,8 @@
             float: right;
             width: 20%;
             height: 5rem;
-            display:table-cell;
-            vertical-align:middle;
+            display: table-cell;
+            vertical-align: middle;
         }
 
         .profile:after {
@@ -244,10 +268,10 @@
 <body>
 <div class="wrapper clearFix">
     <div class="wrapperTop">
-        <img src="img/Item1.png" class="wrapperTopIcon active">
-        <img src="img/Item2.png" class="wrapperTopIcon">
-        <img src="img/Item3.png" class="wrapperTopIcon">
-        <img src="img/AddApp.png" class="wrapperTopIcon">
+        <div class="wrapperTopIcon active1"><img src="img/Item1.png"></div>
+        <div class="wrapperTopIcon"><img src="img/Item2.png"></div>
+        <div class="wrapperTopIcon"><img src="img/Item3.png"></div>
+        <div class="wrapperTopIcon"><img src="img/AddApp.png"></div>
     </div>
     <div class="wrapperBottom">
         <img src="img/Grid.png" class="wrapperBottomIcon">
@@ -282,7 +306,7 @@
     </div>
     <div class="secondaryMain">
         <div class="secondaryMainTitle"><span>DASHBOARD</span><img src="img/Settings.png"></div>
-        <div class="secondaryMainText active"><span>Messages</span>
+        <div class="secondaryMainText active2"><span>Messages</span>
             <div class="notification">21</div>
         </div>
         <div class="secondaryMainText"><span>Connections</span></div>
