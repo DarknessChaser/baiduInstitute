@@ -28,6 +28,19 @@
             clear: both;
         }
 
+        .overflowHide {
+            overflow: auto;
+            /*隐藏滚动条，当IE下溢出，仍然可以滚动*/
+            -ms-overflow-style: none;
+            /*火狐下隐藏滚动条*/
+            overflow: -moz-scrollbars-none;
+        }
+
+        /*chrome下隐藏滚动条*/
+        .overflowHide::-webkit-scrollbar {
+            display: none;
+        }
+
         .active1 {
             position: relative;
         }
@@ -97,15 +110,15 @@
             width: 16%;
             height: 100%;
             background-color: #222c3c;
-            position: relative;
         }
 
         .secondaryBottom {
             position: absolute;
-            left: 0;
+            left: 6%;
             bottom: 0;
-            width: 100%;
+            width: 16%;
             text-align: center;
+            background-color: #222c3c;
         }
 
         .secondaryBottomText {
@@ -192,6 +205,7 @@
             width: 78%;
             height: 5rem;
             float: left;
+            border-bottom: 1px solid #e6e9ec;
         }
 
         .barName {
@@ -262,6 +276,25 @@
             font-size: 0.75rem;
             color: #b5b5b5;
         }
+
+        .chatLeft {
+            width: 26%;
+            height: calc(100% - 5rem - 1px);
+            float: left;
+            border-right: 1px solid #e6e9ec;
+        }
+
+        .search {
+            height: 70px;
+            line-height: 70px;
+            border-bottom: 1px solid #e6e9ec;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .searchInput {
+
+        }
     </style>
 </head>
 <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -278,7 +311,7 @@
         <img src="img/Settings.png" class="wrapperBottomIcon">
     </div>
 </div>
-<div class="secondary clearFix">
+<div class="secondary clearFix overflowHide">
     <div class="secondaryMain">
         <div class="secondaryMainTitle"><span>MENU</span><img src="img/Settings.png"></div>
         <div class="secondaryMainText"><span>Overview</span></div>
@@ -337,6 +370,12 @@
         </div>
     </div>
 </div>
+<div class="chatLeft overflowHide">
+    <div class="search">
+        <input type="search" class="searchInput">
+    </div>
+</div>
+<div class="chatRight overflowHide"></div>
 </body>
 <script>
     /*let test = $(".secondaryMain:nth-of-type(2) .secondaryMainText");
