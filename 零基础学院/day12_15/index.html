@@ -29,7 +29,7 @@
         }
 
         .overflowHide {
-            overflow: auto;
+            overflow: scroll;
             /*隐藏滚动条，当IE下溢出，仍然可以滚动*/
             -ms-overflow-style: none;
             /*火狐下隐藏滚动条*/
@@ -290,10 +290,25 @@
             border-bottom: 1px solid #e6e9ec;
             vertical-align: middle;
             text-align: center;
+            position: relative;
         }
 
         .searchInput {
+            width: 80%;
+            line-height: 36px;
+            vertical-align:middle;
+            border-radius: 4px;
+            border: solid 1px #e5e8ee;
+            padding-left: 2.5%;
+        }
 
+        .searchIcon {
+            position: absolute;
+            right: 14%;
+            top: 40%;
+            width: 1rem;
+            height: 1rem;
+            display: block;
         }
     </style>
 </head>
@@ -372,7 +387,11 @@
 </div>
 <div class="chatLeft overflowHide">
     <div class="search">
-        <input type="search" class="searchInput">
+        <input class="searchInput" type="search" placeholder="Search">
+        <img class="searchIcon" src="img/Searchicon.png">
+    </div>
+    <div class="chatLeftMain">
+
     </div>
 </div>
 <div class="chatRight overflowHide"></div>
