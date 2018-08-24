@@ -41,37 +41,6 @@
             display: none;
         }
 
-        .active1 {
-            position: relative;
-        }
-
-        .active1:before {
-            content: "";
-            width: 0.125rem;
-            height: 0.25rem;
-            background-color: #2399f1;
-            border-radius: 0 0.25rem 0.25rem 0;
-            box-shadow: 0 0 0.5rem #2399f1;
-            position: absolute;
-            top: 50%;
-            left: 0%;
-        }
-
-        .active2 {
-            position: relative;
-        }
-
-        .active2:after {
-            content: "";
-            width: 0.125rem;
-            height: 0.25rem;
-            background-color: #2399f1;
-            border-radius: 0 0.25rem 0.25rem 0;
-            box-shadow: 0 0 0.5rem #2399f1;
-            position: absolute;
-            left: -21.5%;
-        }
-
         .wrapper {
             float: left;
             width: 6%;
@@ -87,6 +56,23 @@
 
         .wrapperTopIcon:first-of-type {
             margin-top: 1.5rem;
+        }
+
+
+        .wrapperTopIcon-active {
+            position: relative;
+        }
+
+        .wrapperTopIcon-active:before {
+            content: "";
+            width: 0.125rem;
+            height: 0.25rem;
+            background-color: #2399f1;
+            border-radius: 0 0.25rem 0.25rem 0;
+            box-shadow: 0 0 0.5rem #2399f1;
+            position: absolute;
+            top: 50%;
+            left: 0%;
         }
 
         .wrapperTopIcon > img {
@@ -175,6 +161,21 @@
             flex-flow: row nowrap;
         }
 
+        .secondaryMainText-active {
+            position: relative;
+        }
+
+        .secondaryMainText-active:after {
+            content: "";
+            width: 0.125rem;
+            height: 0.25rem;
+            background-color: #2399f1;
+            border-radius: 0 0.25rem 0.25rem 0;
+            box-shadow: 0 0 0.5rem #2399f1;
+            position: absolute;
+            left: -21.5%;
+        }
+
         .secondaryMain:nth-of-type(2) .secondaryMainText {
             justify-content: flex-start;
         }
@@ -191,6 +192,7 @@
             background-image: linear-gradient(0deg, #1991eb 0%, #2ea1f8 100%);
             border-radius: 0.6rem;
             text-align: center;
+            color: #ffffff;
             order: 1;
         }
 
@@ -200,6 +202,7 @@
             background-image: linear-gradient(180deg, #f45438 0%, #cb270a 100%);
             border-radius: 0.6rem;
             text-align: center;
+            color: #ffffff;
         }
 
         .topBar {
@@ -262,7 +265,7 @@
 
         .profileRight {
             float: right;
-            margin-right: 40%;
+            margin-right: 35%;
             height: 100%;
         }
 
@@ -311,13 +314,73 @@
             height: 1rem;
             display: block;
         }
+
+        .chatLeftBody {
+            border-left: solid 2px transparent;
+            padding: 5%;
+            border-bottom: solid 1px #e5e8ee;
+        }
+
+        .chatLeftBody-active {
+            border-left: solid 2px #2399f1;
+        }
+
+        .chatLeftBodyTitle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 5%;
+        }
+
+        .chatLeftInfo {
+            width: 65%;
+        }
+
+        .chatLeftName {
+            font-size: 16px;
+            color: #585d68;
+        }
+
+        .chatLeftBody-active .chatLeftName {
+            color: #2399f1;
+        }
+
+        .chatLeftBody-active .chatLeftName:before {
+            font-size: 14px;
+            content:'';
+            display: inline-block;
+            width: 0.5em;
+            height: 0.5em;
+            margin: 0 0.5em;
+            margin-bottom: 0.125em;
+            background-color: #2399f1;
+            border-radius: 50%;
+        }
+
+        .chatLeftCompany {
+            font-size: 14px;
+            color: #b5b5b5;
+        }
+
+        .chatLeftTime {
+            font-size: 14px;
+            color: #7f8fa4;
+        }
+
+        .chatLeftBodyText {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #585d68;
+        }
     </style>
 </head>
 <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <body>
 <div class="wrapper clearFix">
     <div class="wrapperTop">
-        <div class="wrapperTopIcon active1"><img src="img/Item1.png"></div>
+        <div class="wrapperTopIcon wrapperTopIcon-active"><img src="img/Item1.png"></div>
         <div class="wrapperTopIcon"><img src="img/Item2.png"></div>
         <div class="wrapperTopIcon"><img src="img/Item3.png"></div>
         <div class="wrapperTopIcon"><img src="img/AddApp.png"></div>
@@ -355,7 +418,7 @@
     </div>
     <div class="secondaryMain">
         <div class="secondaryMainTitle"><span>DASHBOARD</span><img src="img/Settings.png"></div>
-        <div class="secondaryMainText active2"><span>Messages</span>
+        <div class="secondaryMainText secondaryMainText-active"><span>Messages</span>
             <div class="notification">21</div>
         </div>
         <div class="secondaryMainText"><span>Connections</span></div>
@@ -392,7 +455,98 @@
         <img class="searchIcon" src="img/Searchicon.png">
     </div>
     <div class="chatLeftMain">
-
+        <div class="chatLeftBody chatLeftBody-active">
+            <div class="chatLeftBodyTitle">
+                <img class="chatLeftFace" src="img/Avatar1.png">
+                <div class="chatLeftInfo">
+                    <div class="chatLeftName">Bessie Berry</div>
+                    <div class="chatLeftCompany">Twitter</div>
+                </div>
+                <div class="chatLeftTime">3m</div>
+            </div>
+            <div class="chatLeftBodyText">
+                <span>I pay for the 4Mb/sec down, 512 Kb/sec up service from O2. In fact, it's relatively quick, and stable...</span>
+                <div class="notification">4</div>
+            </div>
+        </div>
+        <div class="chatLeftBody">
+            <div class="chatLeftBodyTitle">
+                <img class="chatLeftFace" src="img/Avatar2.png">
+                <div class="chatLeftInfo">
+                    <div class="chatLeftName">Victor Weber</div>
+                    <div class="chatLeftCompany">Adobe</div>
+                </div>
+                <div class="chatLeftTime">8m</div>
+            </div>
+            <div class="chatLeftBodyText">
+                <span>I shared this on my fb wall a few months back, and I thought I'd share it here again because it's such a great...</span>
+            </div>
+        </div>
+        <div class="chatLeftBody">
+            <div class="chatLeftBodyTitle">
+                <img class="chatLeftFace" src="img/Avatar3.png">
+                <div class="chatLeftInfo">
+                    <div class="chatLeftName">Dustin Benson</div>
+                    <div class="chatLeftCompany">Facebook</div>
+                </div>
+                <div class="chatLeftTime">Yesterday</div>
+            </div>
+            <div class="chatLeftBodyText">
+                <span>If there is anyone who needs an invitation please add yourself in the comments of this post!</span>
+            </div>
+        </div>
+        <div class="chatLeftBody">
+            <div class="chatLeftBodyTitle">
+                <img class="chatLeftFace" src="img/Avatar4.png">
+                <div class="chatLeftInfo">
+                    <div class="chatLeftName">Jack Mason</div>
+                    <div class="chatLeftCompany">Yahoo</div>
+                </div>
+                <div class="chatLeftTime">Yesterday</div>
+            </div>
+            <div class="chatLeftBodyText">
+                <span>BruteDC is a peer-to-peer movie+tv series sharing and downloading platform which works on intranet inside...</span>
+            </div>
+        </div>
+        <div class="chatLeftBody">
+            <div class="chatLeftBodyTitle">
+                <img class="chatLeftFace" src="img/Avatar5.png">
+                <div class="chatLeftInfo">
+                    <div class="chatLeftName">Stephen Shelton</div>
+                    <div class="chatLeftCompany">Snapchat</div>
+                </div>
+                <div class="chatLeftTime">13 Jun</div>
+            </div>
+            <div class="chatLeftBodyText">
+                <span>Yes, p2p traffic is often filtered (QoSed). Although i do use BT on O2 wires, and in good days dl speed...</span>
+            </div>
+        </div>
+        <div class="chatLeftBody">
+            <div class="chatLeftBodyTitle">
+                <img class="chatLeftFace" src="img/Avatar6.png">
+                <div class="chatLeftInfo">
+                    <div class="chatLeftName">Sally Willis</div>
+                    <div class="chatLeftCompany">Twitter</div>
+                </div>
+                <div class="chatLeftTime">12 Jun</div>
+            </div>
+            <div class="chatLeftBodyText">
+                <span>Yes, it's O2: 'internet extreme', which is no longer offered.</span>
+            </div>
+        </div>
+        <div class="chatLeftBody">
+            <div class="chatLeftBodyTitle">
+                <img class="chatLeftFace" src="img/Avatar7.png">
+                <div class="chatLeftInfo">
+                    <div class="chatLeftName">Robert Patton</div>
+                    <div class="chatLeftCompany">A Team</div>
+                </div>
+                <div class="chatLeftTime">9 Jun</div>
+            </div>
+            <div class="chatLeftBodyText">
+                <span>I change my service from this 4Mb plan to their much cheaper 8Mb plan, my speed will dramatically decrease.</span>
+            </div>
+        </div>
     </div>
 </div>
 <div class="chatRight overflowHide"></div>
