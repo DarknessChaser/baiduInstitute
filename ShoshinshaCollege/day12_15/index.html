@@ -41,6 +41,16 @@
             display: none;
         }
 
+        .myButton {
+            -webkit-appearance: button;
+            cursor: pointer;
+            text-transform: none;
+            overflow: visible;
+            margin: 0;
+            font: inherit;
+            color: inherit;
+        }
+
         .wrapper {
             float: left;
             width: 6%;
@@ -382,6 +392,7 @@
         }
 
         .chatRightTop {
+            padding: 0 3%;
             height: 70px;
             line-height: 70px;
             border-bottom: 1px solid #e6e9ec;
@@ -391,6 +402,17 @@
         .chatRightTopTitle {
             font-size: 1.2rem;
             color: #585d68;
+        }
+
+        .chatRightTopTitle:after {
+            content:'';
+            display: inline-block;
+            width: 0.5em;
+            height: 0.5em;
+            margin: 0 0.5em;
+            margin-bottom: 0.1em;
+            background-color: #1bb934;
+            border-radius: 50%;
         }
     </style>
 </head>
@@ -570,7 +592,11 @@
 <div class="chatRight overflowHide">
     <div class="chatRightTop">
         <span class="chatRightTopTitle">Bessie Berry</span>
-        <div class="chatRight"></div>
+        <div class="chatRight">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+        </div>
     </div>
 </div>
 </body>
