@@ -374,6 +374,24 @@
             font-size: 14px;
             color: #585d68;
         }
+
+        .chatRight {
+            width: calc(52% - 1px);
+            height: calc(100% - 5rem - 1px);
+            float: right;
+        }
+
+        .chatRightTop {
+            height: 70px;
+            line-height: 70px;
+            border-bottom: 1px solid #e6e9ec;
+            vertical-align: middle;
+        }
+
+        .chatRightTopTitle {
+            font-size: 1.2rem;
+            color: #585d68;
+        }
     </style>
 </head>
 <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -549,7 +567,12 @@
         </div>
     </div>
 </div>
-<div class="chatRight overflowHide"></div>
+<div class="chatRight overflowHide">
+    <div class="chatRightTop">
+        <span class="chatRightTopTitle">Bessie Berry</span>
+        <div class="chatRight"></div>
+    </div>
+</div>
 </body>
 <script>
     /*let test = $(".secondaryMain:nth-of-type(2) .secondaryMainText");
