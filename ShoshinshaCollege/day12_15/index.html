@@ -63,14 +63,27 @@
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
-            background-image: none;
-            border: 1px solid transparent;
-            border-radius: 4px;
+            background-image: linear-gradient(0deg, #f1f3f7 0%, #ffffff 100%), linear-gradient(#ffffff, #ffffff);
+            border: 1px solid #ced0da;
         }
 
         .myButton:hover {
             color: #333;
             text-decoration: none;
+        }
+
+        .myButton:focus {
+            outline: none;
+        }
+
+        .myButtonFirst {
+            border-radius: 4px 0 0 4px;
+            border-right: none;
+        }
+
+        .myButtonLast {
+            border-radius: 0 4px 4px 0;
+            border-left: none;
         }
 
         .wrapper {
@@ -259,7 +272,6 @@
             float: right;
             width: 20%;
             height: 5rem;
-            display: table-cell;
             vertical-align: middle;
         }
 
@@ -296,8 +308,8 @@
         }
 
         .profileRight {
-            float: right;
-            margin-right: 35%;
+            float: left;
+            margin-left: 5%;
             height: 100%;
         }
 
@@ -439,6 +451,22 @@
 
         .chatRightButtonGroup {
             float: right;
+            vertical-align: middle;
+        }
+
+        .functionButton {
+            float: left;
+        }
+
+        .pageButton {
+            float: right;
+        }
+
+        .YLine {
+            float: left;
+            margin: 0 1rem;
+            opacity: 0.3;
+            font-size: 28px;
         }
     </style>
 </head>
@@ -619,10 +647,17 @@
     <div class="chatRightTop">
         <span class="chatRightTopTitle">Bessie Berry</span>
         <div class="chatRightButtonGroup">
-            <div>
-                <button class="myButton">1</button>
-                <button class="myButton">2</button>
-                <button class="myButton">3</button>
+            <div class="functionButton">
+                <button class="myButton myButtonFirst">1</button><!--取消间距用
+                --><button class="myButton">2</button><!--取消间距用
+                --><button class="myButton myButtonLast">3</button>
+            </div>
+            <div class="YLine">|</div>
+            <div class="pageButton">
+                <span>1 of 28</span>
+                <button class="myButton myButtonFirst">1</button><!--取消间距用
+                --><button class="myButton">2</button><!--取消间距用
+                --><button class="myButton myButtonLast">3</button>
             </div>
         </div>
     </div>
