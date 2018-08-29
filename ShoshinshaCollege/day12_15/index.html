@@ -49,6 +49,28 @@
             margin: 0;
             font: inherit;
             color: inherit;
+            display: inline-block;
+            padding: 6px 12px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+
+        .myButton:hover {
+            color: #333;
+            text-decoration: none;
         }
 
         .wrapper {
@@ -414,6 +436,10 @@
             background-color: #1bb934;
             border-radius: 50%;
         }
+
+        .chatRightButtonGroup {
+            float: right;
+        }
     </style>
 </head>
 <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -592,10 +618,12 @@
 <div class="chatRight overflowHide">
     <div class="chatRightTop">
         <span class="chatRightTopTitle">Bessie Berry</span>
-        <div class="chatRight">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
+        <div class="chatRightButtonGroup">
+            <div>
+                <button class="myButton">1</button>
+                <button class="myButton">2</button>
+                <button class="myButton">3</button>
+            </div>
         </div>
     </div>
 </div>
