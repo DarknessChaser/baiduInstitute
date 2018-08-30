@@ -65,6 +65,7 @@
             user-select: none;
             background-image: linear-gradient(0deg, #f1f3f7 0%, #ffffff 100%), linear-gradient(#ffffff, #ffffff);
             border: 1px solid #ced0da;
+            border-left: none;
         }
 
         .myButton:hover {
@@ -78,12 +79,26 @@
 
         .myButtonFirst {
             border-radius: 4px 0 0 4px;
-            border-right: none;
+            border-left: 1px solid #ced0da;
         }
 
         .myButtonLast {
             border-radius: 0 4px 4px 0;
             border-left: none;
+        }
+
+        .myIcon {
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            vertical-align: -3px;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .myIconBig {
+            width: 2rem;
+            height: 2rem;
         }
 
         .wrapper {
@@ -102,7 +117,6 @@
         .wrapperTopIcon:first-of-type {
             margin-top: 1.5rem;
         }
-
 
         .wrapperTopIcon-active {
             position: relative;
@@ -344,7 +358,7 @@
         .searchInput {
             width: 80%;
             height: 36px;
-            vertical-align:middle;
+            vertical-align: middle;
             border-radius: 4px;
             border: solid 1px #e5e8ee;
             padding-left: 2.5%;
@@ -376,6 +390,11 @@
             margin-bottom: 5%;
         }
 
+        .chatLeftFace {
+            width: 46px;
+            height: 46px;
+        }
+
         .chatLeftInfo {
             width: 65%;
         }
@@ -391,7 +410,7 @@
 
         .chatLeftBody-active .chatLeftName:before {
             font-size: 14px;
-            content:'';
+            content: '';
             display: inline-block;
             width: 0.5em;
             height: 0.5em;
@@ -439,7 +458,7 @@
         }
 
         .chatRightTopTitle:after {
-            content:'';
+            content: '';
             display: inline-block;
             width: 0.5em;
             height: 0.5em;
@@ -451,15 +470,16 @@
 
         .chatRightButtonGroup {
             float: right;
-            vertical-align: middle;
         }
 
         .functionButton {
             float: left;
+            font-size: 0;
         }
 
         .pageButton {
-            float: right;
+            float: left;
+            font-size: 0;
         }
 
         .YLine {
@@ -467,6 +487,123 @@
             margin: 0 1rem;
             opacity: 0.3;
             font-size: 28px;
+        }
+
+        .pageNumber {
+            font-size: 14px;
+            color: #56688a;
+            margin-right: 0.5rem;
+            vertical-align: -3px;
+        }
+
+        .userIcon {
+            background-image: url("img/UserIcon.png");
+        }
+
+        .uploadIcon {
+            background-image: url("img/UploadIcon.png");
+        }
+
+        .trashIcon {
+            background-image: url("img/TrashIcon.png");
+        }
+
+        .arrowLeftIcon {
+            background-image: url("img/ArrowLeft.png");
+        }
+
+        .arrowRightIcon {
+            background-image: url("img/ArrowRight.png");
+        }
+
+        .chatRightMain {
+            padding-bottom: 3%;
+        }
+
+        .chatRightBody {
+            padding: 3% 3% 0 3%;
+        }
+
+        .chatRightFace {
+            float: left;
+            max-width: 8%;
+        }
+
+        .chatRightBodyMain {
+            float: right;
+            width: 92%;
+        }
+
+        .chatRightName {
+            font-size: 16px;
+            color: #585d68;
+        }
+
+        .chatRightTime {
+            margin-left: 1em;
+            font-size: 14px;
+            color: #7f8fa4;
+        }
+
+        .chatRightText {
+            margin-top: 2%;
+            font-size: 14px;
+            color: #585d68;
+        }
+
+        .hrLine {
+            position: relative;
+            text-align: center;
+            height: 0;
+            margin: 1.5% 0;
+        }
+
+        .grayLine {
+            color: #7F8FA4;
+        }
+
+        .blueLine {
+            color: #2399f1;
+        }
+
+        .hrLine span {
+            position: relative;
+            padding: 0 10px;
+            z-index: 2;
+            background: #fff;
+        }
+
+        .hrLine:before {
+            position: absolute;
+            top: 12px;
+            display: block;
+            content: "";
+            width: 100%;
+            height: 1px;
+        }
+
+        .grayLine:before {
+            background: rgba(159, 169, 186, 0.4);
+        }
+
+        .blueLine:before {
+            background: rgba(35, 153, 241, 0.4);
+        }
+
+        .addIcon {
+            background-image: url("img/AddIcon.png");
+        }
+
+        .chatRightBottom {
+            width: calc(52% - 1px - 4%);
+            position: absolute;
+            bottom: 0;
+            padding: 1% 2%;
+            background: #ffffff;
+        }
+
+        .sendMessage {
+            
         }
     </style>
 </head>
@@ -648,17 +785,89 @@
         <span class="chatRightTopTitle">Bessie Berry</span>
         <div class="chatRightButtonGroup">
             <div class="functionButton">
-                <button class="myButton myButtonFirst">1</button><!--取消间距用
-                --><button class="myButton">2</button><!--取消间距用
-                --><button class="myButton myButtonLast">3</button>
+                <button class="myButton myButtonFirst"><span class="myIcon userIcon"></span></button><!--取消间距用
+                --><button class="myButton"><span class="myIcon uploadIcon"></span></button><!--取消间距用
+                --><button class="myButton myButtonLast"><span class="myIcon trashIcon"></span></button>
             </div>
             <div class="YLine">|</div>
             <div class="pageButton">
-                <span>1 of 28</span>
-                <button class="myButton myButtonFirst">1</button><!--取消间距用
-                --><button class="myButton">2</button><!--取消间距用
-                --><button class="myButton myButtonLast">3</button>
+                <span class="pageNumber">1 of 28</span>
+                <button class="myButton myButtonFirst"><span class="myIcon arrowLeftIcon"></span></button><!--取消间距用
+                --><button class="myButton myButtonLast"><span class="myIcon arrowRightIcon"></span></button>
             </div>
+        </div>
+    </div>
+    <div class="chatRightMain">
+        <div class="chatRightBody clearFix">
+            <img class="chatRightFace" src="img/Avatar1.png">
+            <div class="chatRightBodyMain">
+                <div><span class="chatRightName">Bessie Berry</span><span class="chatRightTime">8:31 AM</span></div>
+                <div class="chatRightText">Hi guys Ive got the O2 package and have really slow internet. A speed check
+                    online said i can get 3mbps but it seems more like 0.5 these days, just freezing and taking ages to
+                    open pages and open audio files for example. I have decided to switch to the UPC package which
+                    offers 10mbps but do you think i will get it?
+                </div>
+            </div>
+        </div>
+        <div class="chatRightBody clearFix">
+            <img class="chatRightFace" src="img/Avatar8.png">
+            <div class="chatRightBodyMain">
+                <div><span class="chatRightName">Jordan Jackson</span><span class="chatRightTime">8:31 AM</span></div>
+                <div class="chatRightText">I have internet for 9 month and nevere could benefit from the full capacity
+                    of
+                    5Mbit/s as it is filtered by O2 when it detect traffic on public p2p sharing in my situation all my
+                    internet speed slows to 512Kbit/s. I never had 400KB/s on when downloading from p2p public servers
+                    like torrent emule etc. I downoad with 500KB/s from private trakers instead. So conlcusion O2 block
+                    trafic on p2p connections. I have made hundreds of test in Italy and Sweden and Romania with the
+                    same file to doanload with the same setting and same antivirus and just needed to open ports in
+                    firewall and forward same ports and the speed was at full capacity in 1 minute. here in 9 month
+                    never had this luck.
+                </div>
+            </div>
+        </div>
+        <div class="hrLine grayLine"><span>Tuesday</span></div>
+        <div class="chatRightBody clearFix">
+            <img class="chatRightFace" src="img/Avatar1.png">
+            <div class="chatRightBodyMain">
+                <div><span class="chatRightName">Bessie Berry</span><span class="chatRightTime">8:31 AM</span></div>
+                <div class="chatRightText">Funny comparison. so would the proper antivirus not slow down the internet as
+                    much or do you mean a freebie doenst protect the computer from viruses?
+                </div>
+            </div>
+        </div>
+        <div class="chatRightBody clearFix">
+            <img class="chatRightFace" src="img/Avatar8.png">
+            <div class="chatRightBodyMain">
+                <div><span class="chatRightName">Jordan Jackson</span><span class="chatRightTime">8:31 AM</span></div>
+                <div class="chatRightText">I pay for the 4Mb/sec down, 512 Kb/sec up service from O2, and haven't had
+                    any problems. In fact, it's relatively quick, and stable. It's not perfect, but I really don't have
+                    issues, as long as I keep track of what I'm doing on it. I max out at about 3 Mb/sec down, and 350
+                    Kb/sec up. Probably because of a noisy telephone line, not because I'm being throttled. When my
+                    uploads go over 25 KB/sec (note, bytes, not bits), my download speed suffers. This is expected, as
+                    downloads require upload bandwidth as well.
+                </div>
+                <div class="chatRightImgGroup">
+
+                </div>
+            </div>
+        </div>
+        <div class="hrLine blueLine"><span>New Messages</span></div>
+        <div class="chatRightBody clearFix">
+            <img class="chatRightFace" src="img/Avatar1.png">
+            <div class="chatRightBodyMain">
+                <div><span class="chatRightName">Bessie Berry</span><span class="chatRightTime">8:31 AM</span></div>
+                <div class="chatRightText">I pay for the 4Mb/sec down, 512 Kb/sec up service from O2. In fact, it's
+                    relatively quick, and stable. It's not perfect, but I really don't have issues, as long as I keep
+                    track of what I'm doing on it.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="chatRightBottom">
+        <button class="myButton myButtonFirst"><span class="myIcon addIcon myIconBig"></span></button><!--取消间距用
+        -->
+        <div class="sendMessage">
+            <input class="sendMessage" value="Well, kinda both :) but more of that second option, i`ve seen many systems infected and crawling with">
         </div>
     </div>
 </div>
