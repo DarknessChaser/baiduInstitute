@@ -11,6 +11,7 @@
         margin: auto;
         border: red dotted 50px;
         position: relative;
+        background-color: #0c5460;
     }
 
     .red1 {
@@ -18,7 +19,7 @@
         top: -25px;
         width: 200px;
         height: 150px;
-        background: red;
+        background: green;
         position: absolute;
     }
 
@@ -27,7 +28,7 @@
         top: -50px;
         width: 150px;
         height: 200px;
-        background: red;
+        background: green;
         position: absolute;
     }
 
@@ -40,6 +41,11 @@
     .mytest {
         position: absolute;
         clip: rect(0px 100px 100px 0px);
+    }
+
+    .text-test {
+        font-family: Consolas;
+        width: 6em;
     }
 </style>
 <body>
@@ -54,33 +60,133 @@
     <input type="search" value="search" style="line-height: 200px">
 </div>
 
+<div class="text-test">
+    <p class="cn-text">中文测试。。。</p>
+    <p class="en-text">english test...</p>
+    <p class="hybrid-text">中文 english 111 +++</p>
+</div>
+<input type="text" id="input"><span id="span"></span>
+<script>
+    const obj = {};
+    Object.defineProperty(obj, 'text', {
+        get: function() {
+            console.log('get val');
+        },
+        set: function(newVal) {
+            console.log('set val:' + newVal);
+            document.getElementById('input').value = newVal;
+            document.getElementById('span').innerHTML = newVal;
+        }
+    });
+
+    const input = document.getElementById('input');
+    input.addEventListener('keyup', function(e){
+        obj.text = e.target.value;
+    })
+</script>
 <a class="mytest">
     <h1>sdadasdasdasda</h1>
 </a>
+<!--<script>-->
+    <!--async function async1() {-->
+        <!--console.log("async1 start");-->
+        <!--await async2();-->
+        <!--console.log("async1 end");-->
+
+    <!--}-->
+
+    <!--async function async2() {-->
+        <!--console.log('async2');-->
+    <!--}-->
+
+    <!--console.log("script start");-->
+    <!--setTimeout(function () {-->
+        <!--console.log("settimeout");-->
+    <!--}, 0);-->
+    <!--async1();-->
+    <!--new Promise(function (resolve) {-->
+        <!--console.log("promise1");-->
+        <!--resolve();-->
+    <!--}).then(function () {-->
+        <!--console.log("promise2");-->
+    <!--});-->
+    <!--console.log('script end');-->
+<!--</script>-->
+<!--<script>-->
+    <!--function deepClone(source){-->
+        <!--if(!source || typeof source !== 'object'){-->
+            <!--throw new Error('error arguments', 'shallowClone');-->
+        <!--}-->
+        <!--var targetObj = source.constructor === Array ? [] : {};-->
+        <!--for(var keys in source){-->
+            <!--if(source.hasOwnProperty(keys)){-->
+                <!--if(source[keys] && typeof source[keys] === 'object'){-->
+                    <!--targetObj[keys] = source[keys].constructor === Array ? [] : {};-->
+                    <!--targetObj[keys] = deepClone(source[keys]);-->
+                <!--}else{-->
+                    <!--targetObj[keys] = source[keys];-->
+                <!--}-->
+            <!--}-->
+        <!--}-->
+        <!--return targetObj;-->
+    <!--}-->
+    <!--// test example-->
+    <!--var o1 = {-->
+        <!--arr: [1, 2, 3],-->
+        <!--obj: {-->
+            <!--key: 'value'-->
+        <!--},-->
+        <!--func: function(){-->
+            <!--return 1;-->
+        <!--}-->
+    <!--};-->
+    <!--var o3 = deepClone(o1);-->
+    <!--console.log(o3 === o1); // => false-->
+    <!--console.log(o3.obj === o1.obj); // => false-->
+    <!--console.log(o3.func === o1.func); // => true-->
+    <!--console.log(toString() in o1);-->
+
+    <!--var o4 = [1,2,3,4,5,6,7,8,9];-->
+    <!--var o5 = o4.map(function (obj) {-->
+        <!--return obj+1-->
+    <!--});-->
+    <!--console.log(o4)-->
+<!--</script>-->
 <script>
-    async function async1() {
-        console.log("async1 start");
-        await async2();
-        console.log("async1 end");
-
+    var arr = [2,5,9,7,6,3]
+    var len = arr.length;
+    for(let i = 0;i<len;i++){
+        for(let j=0;j<len-i-1;j++){
+            if(arr[j]>arr[j+1]){
+                let temp = arr[j]
+                arr[j] = arr[j+1]
+                arr[j+1] = temp
+            }
+        }
     }
+    console.log(arr)
 
-    async function async2() {
-        console.log('async2');
+    var data = {
+        name: '二狗',
+        sex: '男'
+    };
+    var str = '姓名:${name},性别:${sex},年龄:${age}';
+    let strParse = (str, data) => {
+        var start = str.indexOf('${');
+        var end = str.indexOf('}');
+        var arg = str.slice(start + 2, end);
+        // if (data[arg] === undefined) {
+        //     throw arg + " is not defined!";
+        // }
+        str = str.replace('${' + arg + '}', data[arg]);
+        if (str.indexOf('${') > -1) {
+            return strParse(str, data);
+        }
+        else {
+            return str;
+        }
     }
-
-    console.log("script start");
-    setTimeout(function () {
-        console.log("settimeout");
-    }, 0);
-    async1();
-    new Promise(function (resolve) {
-        console.log("promise1");
-        resolve();
-    }).then(function () {
-        console.log("promise2");
-    });
-    console.log('script end');
+    console.log(strParse(str, data));
 </script>
 </body>
 </html>
