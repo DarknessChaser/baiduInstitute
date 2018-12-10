@@ -5,38 +5,61 @@
     <title>Title</title>
 </head>
 <body>
-<table class="layout-table">
-    <tbody>
-    <tr>
-        <td>
-            <div class="layout-div layout-div1">的三大1</div>
-        </td>
-        <td>
-            <div class="layout-div layout-div2">的三大2</div>
-        </td>
-        <td>
-            <div class="layout-div layout-div3">的三大5</div>
-        </td>
-        <td>
-            <div class="layout-div layout-div4">的三大7</div>
-        </td>
-    </tr>
-    </tbody>
-</table>
+<div class="fixed-div">
+    <button type="button" onclick="addDiv()">新增随机div</button>
+</div>
+<div class="main vertica-mode">
+    <table class="layout-table vertica-mode">
+        <tbody>
+        <tr>
+            <td>
+                <div class="layout-div horizontal-mode layout-div1">第1个div</div>
+            </td>
+            <td>
+                <div class="layout-div horizontal-mode layout-div2">第2个div</div>
+            </td>
+            <td>
+                <div class="layout-div horizontal-mode layout-div3">第3个div</div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 <style>
     html {
-        height: 100%;
-        width: 100%;
         padding: 0;
         margin: 0;
+        height: 100%;
+        width: 100%;
     }
 
     body {
         padding: 0;
         margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .vertica-mode {
         writing-mode: tb-lr;
         -webkit-writing-mode: vertical-lr;
         writing-mode: vertical-lr;
+    }
+
+    .horizontal-mode {
+        writing-mode: lr-tb;
+        -webkit-writing-mode: horizontal-tb;
+        writing-mode: horizontal-tb;
+    }
+
+    .fixed-div {
+        position: fixed;
+        top: 50%;
+        right: 0;
+        background-color: #ffffff;
+    }
+
+    .main {
         height: 100%;
         width: 100%;
         background-color: #0c5460;
@@ -48,14 +71,16 @@
         border-spacing: 0;
     }
 
+    .layout-table tr {
+        padding: 0;
+    }
+
     .layout-table td {
+        width: 100%;
         padding: 0;
     }
 
     .layout-div {
-        writing-mode: lr-tb;
-        -webkit-writing-mode: horizontal-tb;
-        writing-mode: horizontal-tb;
         width: 100%;
         height: 100%;
     }
@@ -71,24 +96,27 @@
     .layout-div3 {
         background-color: #383d41;
     }
-
-    .layout-div4 {
-        background-color: #dc3545;
-    }
 </style>
 <script>
     function addDiv() {
+        var divNumber = document.querySelectorAll('.layout-div').length;
         var layoutTr = document.querySelector('.layout-table').querySelector('tr');
         var newTd = document.createElement('td');
         var newDiv = document.createElement('div');
-        newDiv.style.backgroundColor = randomHexColor;
-        newDiv.classList.add('layout-div');
-        newTd.appendChild(newDiv)
+        newDiv.style.backgroundColor = randomHexColor();
+        newDiv.setAttribute('class', 'layout-div horizontal-mode');
+        divNumber++;
+        newDiv.textContent = '第' + divNumber + '个div';
+        newTd.appendChild(newDiv);
         layoutTr.appendChild(newTd);
     }
 
-    function randomHexColor() {	//随机生成十六进制颜色
-        return '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).substr(-6);
+    function randomHexColor() {	//随机生成rgb颜色
+        this.r = Math.floor(Math.random() * 255);
+        this.g = Math.floor(Math.random() * 255);
+        this.b = Math.floor(Math.random() * 255);
+        this.color = 'rgb(' + this.r + ',' + this.g + ',' + this.b + ')';
+        return this.color = 'rgb(' + this.r + ',' + this.g + ',' + this.b + ')';
     }
 </script>
 </body>
