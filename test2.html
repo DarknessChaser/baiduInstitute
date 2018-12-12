@@ -99,13 +99,12 @@
 </style>
 <script>
     function addDiv() {
-        var divNumber = document.querySelectorAll('.layout-div').length;
+        var divNumber = document.querySelectorAll('.layout-div').length + 1;
         var layoutTr = document.querySelector('.layout-table').querySelector('tr');
         var newTd = document.createElement('td');
         var newDiv = document.createElement('div');
         newDiv.style.backgroundColor = randomRGBColor();
         newDiv.setAttribute('class', 'layout-div horizontal-mode');
-        divNumber++;
         newDiv.textContent = '第' + divNumber + '个div';
         newTd.appendChild(newDiv);
         layoutTr.appendChild(newTd);

@@ -102,7 +102,6 @@
         width: 100%;
         height: 80px;
         margin: auto 0;
-        padding: 0;
         background-color: #ffffff;
     }
 
@@ -113,7 +112,7 @@
 </style>
 <script>
     function addDiv() {
-        var divNumber = document.querySelectorAll('.layout-div').length;
+        var divNumber = document.querySelectorAll('.layout-div').length + 1;
         var layoutTr = document.querySelector('.layout-table').querySelector('tr');
         var newTd = document.createElement('td');
         var newLayoutDiv = document.createElement('div');
@@ -121,7 +120,6 @@
         newTd.style.backgroundColor = randomRGBColor();
         newLayoutDiv.setAttribute('class', 'layout-div');
         newBodyDiv.setAttribute('class', 'layout-body horizontal-mode');
-        divNumber++;
         newBodyDiv.textContent = '第' + divNumber + '个div';
         newLayoutDiv.appendChild(newBodyDiv);
         newTd.appendChild(newLayoutDiv);
