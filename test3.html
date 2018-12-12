@@ -12,14 +12,20 @@
     <table class="layout-table">
         <tbody>
         <tr>
-            <td>
-                <div class="layout-div horizontal-mode layout-div1">第1个div</div>
+            <td class="layout-td1">
+                <div class="layout-div">
+                    <div class="layout-body horizontal-mode">第1个div</div>
+                </div>
             </td>
-            <td>
-                <div class="layout-div horizontal-mode layout-div2">第2个div</div>
+            <td class="layout-td2">
+                <div class="layout-div">
+                    <div class="layout-body horizontal-mode">第2个div</div>
+                </div>
             </td>
-            <td>
-                <div class="layout-div horizontal-mode layout-div3">第3个div</div>
+            <td class="layout-td3">
+                <div class="layout-div">
+                    <div class="layout-body horizontal-mode">第3个div</div>
+                </div>
             </td>
         </tr>
         </tbody>
@@ -80,21 +86,29 @@
         padding: 0;
     }
 
-    .layout-div {
-        width: 100%;
-        height: 100%;
-    }
-
-    .layout-div1 {
+    .layout-td1 {
         background-color: #2ea1f8;
     }
 
-    .layout-div2 {
+    .layout-td2 {
         background-color: #80bdff;
     }
 
-    .layout-div3 {
+    .layout-td3 {
         background-color: #383d41;
+    }
+
+    .layout-div {
+        width: 100%;
+        height: 80px;
+        margin: auto 0;
+        padding: 0;
+        background-color: #ffffff;
+    }
+
+    .layout-body {
+        width: 100%;
+        height: 100%;
     }
 </style>
 <script>
@@ -102,12 +116,15 @@
         var divNumber = document.querySelectorAll('.layout-div').length;
         var layoutTr = document.querySelector('.layout-table').querySelector('tr');
         var newTd = document.createElement('td');
-        var newDiv = document.createElement('div');
-        newDiv.style.backgroundColor = randomRGBColor();
-        newDiv.setAttribute('class', 'layout-div horizontal-mode');
+        var newLayoutDiv = document.createElement('div');
+        var newBodyDiv = document.createElement('div');
+        newTd.style.backgroundColor = randomRGBColor();
+        newLayoutDiv.setAttribute('class', 'layout-div');
+        newBodyDiv.setAttribute('class', 'layout-body horizontal-mode');
         divNumber++;
-        newDiv.textContent = '第' + divNumber + '个div';
-        newTd.appendChild(newDiv);
+        newBodyDiv.textContent = '第' + divNumber + '个div';
+        newLayoutDiv.appendChild(newBodyDiv);
+        newTd.appendChild(newLayoutDiv);
         layoutTr.appendChild(newTd);
     }
 
