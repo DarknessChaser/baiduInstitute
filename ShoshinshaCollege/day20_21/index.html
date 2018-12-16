@@ -16,28 +16,21 @@
 <div id="animate"></div>
 </body>
 <script>
-    let style = document.querySelector("#animate").style
-    style.backgroundPositionY = "-2px"
-    function down() {
-        let time1 = setInterval(function () {
-            if (style.backgroundPositionY == "-7682px") {
-                window.clearInterval(time1)
-                up()
-            } else {
-                style.backgroundPositionY = style.backgroundPositionY.replace('px', '') - 480 + "px"
-            }
-        }, 100)
-    }
-    function up() {
-        let time2 = setInterval(function () {
-            if (style.backgroundPositionY == "-2px") {
-                window.clearInterval(time2)
-                down()
-            } else {
-                style.backgroundPositionY = style.backgroundPositionY.replace('px', '')*1 + 480 + "px"
-            }
-        }, 100)
-    }
-    down()
+    var style = document.querySelector("#animate").style
+    style.backgroundPositionY = "-1px"
+    var flag = 'down';
+    setInterval(function () {
+        if (style.backgroundPositionY === "-7681px") {
+            flag = 'up';
+        }
+        if (style.backgroundPositionY === "-1px") {
+            flag = 'down';
+        }
+        if (flag === 'down') {
+            style.backgroundPositionY = style.backgroundPositionY.replace('px', '') - 480 + "px"
+        } else if (flag === 'up') {
+            style.backgroundPositionY = style.backgroundPositionY.replace('px', '') * 1 + 480 + "px"
+        }
+    }, 100)
 </script>
 </html>
