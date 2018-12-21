@@ -49,8 +49,6 @@
     }
 </style>
 <body>
-<div class="left">321</div>
-<div class="right">sad</div>
 <div class="main">
     <div class="red1"></div>
     <div class="red2"></div>
@@ -71,10 +69,10 @@
 <script>
     const obj = {};
     Object.defineProperty(obj, 'text', {
-        get: function() {
+        get: function () {
             console.log('get val');
         },
-        set: function(newVal) {
+        set: function (newVal) {
             console.log('set val:' + newVal);
             document.getElementById('input').value = newVal;
             document.getElementById('span').innerHTML = newVal;
@@ -82,100 +80,87 @@
     });
 
     const input = document.getElementById('input');
-    input.addEventListener('keyup', function(e){
+    input.addEventListener('keyup', function (e) {
         obj.text = e.target.value;
     })
 </script>
 <a class="mytest">
     <h1>sdadasdasdasda</h1>
 </a>
-<style>
-    .left {
-        background-color: darkred;
-        float: left;
-        width: 100px;
-        margin-right: 20px;
-    }
-
-    .right{
-        background-color: forestgreen;
-        overflow: hidden;
-    }
-</style>
 <!--<script>-->
-    <!--async function async1() {-->
-        <!--console.log("async1 start");-->
-        <!--await async2();-->
-        <!--console.log("async1 end");-->
+<!--async function async1() {-->
+<!--console.log("async1 start");-->
+<!--await async2();-->
+<!--console.log("async1 end");-->
 
-    <!--}-->
+<!--}-->
 
-    <!--async function async2() {-->
-        <!--console.log('async2');-->
-    <!--}-->
+<!--async function async2() {-->
+<!--console.log('async2');-->
+<!--}-->
 
-    <!--console.log("script start");-->
-    <!--setTimeout(function () {-->
-        <!--console.log("settimeout");-->
-    <!--}, 0);-->
-    <!--async1();-->
-    <!--new Promise(function (resolve) {-->
-        <!--console.log("promise1");-->
-        <!--resolve();-->
-    <!--}).then(function () {-->
-        <!--console.log("promise2");-->
-    <!--});-->
-    <!--console.log('script end');-->
+<!--console.log("script start");-->
+<!--setTimeout(function () {-->
+<!--console.log("settimeout");-->
+<!--}, 0);-->
+<!--async1();-->
+<!--new Promise(function (resolve) {-->
+<!--console.log("promise1");-->
+<!--resolve();-->
+<!--}).then(function () {-->
+<!--console.log("promise2");-->
+<!--});-->
+<!--console.log('script end');-->
 <!--</script>-->
 <!--<script>-->
-    <!--function deepClone(source){-->
-        <!--if(!source || typeof source !== 'object'){-->
-            <!--throw new Error('error arguments', 'shallowClone');-->
-        <!--}-->
-        <!--var targetObj = source.constructor === Array ? [] : {};-->
-        <!--for(var keys in source){-->
-            <!--if(source.hasOwnProperty(keys)){-->
-                <!--if(source[keys] && typeof source[keys] === 'object'){-->
-                    <!--targetObj[keys] = source[keys].constructor === Array ? [] : {};-->
-                    <!--targetObj[keys] = deepClone(source[keys]);-->
-                <!--}else{-->
-                    <!--targetObj[keys] = source[keys];-->
-                <!--}-->
-            <!--}-->
-        <!--}-->
-        <!--return targetObj;-->
-    <!--}-->
-    <!--// test example-->
-    <!--var o1 = {-->
-        <!--arr: [1, 2, 3],-->
-        <!--obj: {-->
-            <!--key: 'value'-->
-        <!--},-->
-        <!--func: function(){-->
-            <!--return 1;-->
-        <!--}-->
-    <!--};-->
-    <!--var o3 = deepClone(o1);-->
-    <!--console.log(o3 === o1); // => false-->
-    <!--console.log(o3.obj === o1.obj); // => false-->
-    <!--console.log(o3.func === o1.func); // => true-->
-    <!--console.log(toString() in o1);-->
+<!--function deepClone(source){-->
+<!--if(!source || typeof source !== 'object'){-->
+<!--throw new Error('error arguments', 'shallowClone');-->
+<!--}-->
+<!--var targetObj = source.constructor === Array ? [] : {};-->
+<!--for(var keys in source){-->
+<!--if(source.hasOwnProperty(keys)){-->
+<!--if(source[keys] && typeof source[keys] === 'object'){-->
+<!--targetObj[keys] = source[keys].constructor === Array ? [] : {};-->
+<!--targetObj[keys] = deepClone(source[keys]);-->
+<!--}else{-->
+<!--targetObj[keys] = source[keys];-->
+<!--}-->
+<!--}-->
+<!--}-->
+<!--return targetObj;-->
+<!--}-->
+<!--// test example-->
+<!--var o1 = {-->
+<!--arr: [1, 2, 3],-->
+<!--obj: {-->
+<!--key: 'value'-->
+<!--},-->
+<!--func: function(){-->
+<!--return 1;-->
+<!--}-->
+<!--};-->
+<!--var o3 = deepClone(o1);-->
+<!--console.log(o3 === o1); // => false-->
+<!--console.log(o3.obj === o1.obj); // => false-->
+<!--console.log(o3.func === o1.func); // => true-->
+<!--console.log(toString() in o1);-->
 
-    <!--var o4 = [1,2,3,4,5,6,7,8,9];-->
-    <!--var o5 = o4.map(function (obj) {-->
-        <!--return obj+1-->
-    <!--});-->
-    <!--console.log(o4)-->
+<!--var o4 = [1,2,3,4,5,6,7,8,9];-->
+<!--var o5 = o4.map(function (obj) {-->
+<!--return obj+1-->
+<!--});-->
+<!--console.log(o4)-->
 <!--</script>-->
 <script>
-    var arr = [2,5,9,7,6,3]
+    var arr = [2, 5, 9, 7, 6, 3]
     var len = arr.length;
-    for(let i = 0;i<len;i++){
-        for(let j=0;j<len-i-1;j++){
-            if(arr[j]>arr[j+1]){
+    for (let i = 0; i < len; i++) {
+        for (let j = 0; j < len - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
                 let temp = arr[j]
-                arr[j] = arr[j+1]
-                arr[j+1] = temp
+                arr[j] = arr[j + 1]
+                arr[j + 1] = temp
             }
         }
     }
@@ -196,12 +181,13 @@
         str = str.replace('${' + arg + '}', data[arg]);
         if (str.indexOf('${') > -1) {
             return strParse(str, data);
-        }
-        else {
+        } else {
             return str;
         }
     }
     console.log(strParse(str, data));
+
+    setTimeout('alert(1+2+3+4)',0)
 </script>
 </body>
 </html>
